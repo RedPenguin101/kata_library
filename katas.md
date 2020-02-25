@@ -32,3 +32,21 @@ Rules:
 * If you knock down less than 10 pins with the two rolls in a frame (an 'open frame'), you score the number of pins you knocked down
 * For the 10th and last frame, if you roll a spare you get one extra shot, and if you roll a strike you get 2 extra shots.
 
+### Mastermind
+
+You have been asked to write a Mastermind CLI game. The computer picks a 4 digit code at random from the numbers 0 to 5 inclusive, and the player has 10 attempts to guess the code by typing in the terminal. The computer will score the players guess, with one red-peg for each correct color in the correct place, and one white peg for each correct color in the _incorrect_ place (this can be considered a 2 element vector of the respective scores).
+
+The board should be displayed graphically on screen after each turn, showing the entire history of the game, with the player's guesses and the scores for those guesses, as well as the 'empty' rows.
+
+```
+1 2 3 4 => [1 2]
+4 3 5 3 => [0 3]
+. . . .
+. . . .
+etc.
+```
+
+If the player guesses correctly (i.e. has a score of [4 0]) the computer should congratulate the player and end the game.
+
+If the player goes through all 10 guesses without cracking the code, the computer should finish the game and tell the player what the code was.
+
